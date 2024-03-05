@@ -1040,3 +1040,11 @@
 [2024-03-05 13:50:45,220] {logging_mixin.py:104} INFO - [2024-03-05 13:50:45,220] {dag.py:2280} INFO - Setting next_dagrun for example_external_task_marker_child to None
 [2024-03-05 13:50:45,221] {logging_mixin.py:104} INFO - [2024-03-05 13:50:45,221] {dag.py:2280} INFO - Setting next_dagrun for example_external_task_marker_parent to None
 [2024-03-05 13:50:45,230] {scheduler_job.py:190} INFO - Processing /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.057 seconds
+[2024-03-05 13:51:15,958] {scheduler_job.py:182} INFO - Started process (PID=3420) to work on /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2024-03-05 13:51:15,959] {scheduler_job.py:629} INFO - Processing file /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_external_task_marker_dag.py for tasks to queue
+[2024-03-05 13:51:15,959] {logging_mixin.py:104} INFO - [2024-03-05 13:51:15,959] {dagbag.py:451} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2024-03-05 13:51:15,967] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['example_external_task_marker_parent', 'example_external_task_marker_child']) retrieved from /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2024-03-05 13:51:15,983] {logging_mixin.py:104} INFO - [2024-03-05 13:51:15,983] {dag.py:1824} INFO - Sync 2 DAGs
+[2024-03-05 13:51:15,993] {logging_mixin.py:104} INFO - [2024-03-05 13:51:15,993] {dag.py:2280} INFO - Setting next_dagrun for example_external_task_marker_child to None
+[2024-03-05 13:51:15,994] {logging_mixin.py:104} INFO - [2024-03-05 13:51:15,994] {dag.py:2280} INFO - Setting next_dagrun for example_external_task_marker_parent to None
+[2024-03-05 13:51:16,001] {scheduler_job.py:190} INFO - Processing /home/airflow/.local/lib/python3.6/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.045 seconds
