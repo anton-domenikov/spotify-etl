@@ -18,13 +18,6 @@ REDIRECT_URI = 'http://localhost:8888/callback'
 SCOPE = 'user-read-recently-played%20user-read-currently-playing'
 
 # Step 1: Redirect user for authorization
-auth_params = {
-    'client_id': CLIENT_ID,
-    'response_type': 'code',
-    'redirect_uri': REDIRECT_URI,
-    'scope': SCOPE
-}
-
 auth_url = f'{AUTH_URL}?client_id={CLIENT_ID}&response_type=code&redirect_uri={REDIRECT_URI}&scope={SCOPE}'
 
 print(f'Please visit the following URL to authorize your application:\n{auth_url}')
@@ -42,13 +35,13 @@ token_params = {
 response = requests.post(TOKEN_URL, data=token_params)
 response_data = response.json()
 
+# Step 3: Update the access token in .env file if successful
 if 'error' in response_data:
     print(f'Error: {response_data["error"]}')
 else:
     access_token = response_data['access_token']
     print(f'Access Token: {access_token}')
 
-    # Update the access token in .env file
     with open('.env', 'r') as f:
         lines = f.readlines()
 
