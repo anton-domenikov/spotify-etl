@@ -1,6 +1,8 @@
 import os
 import requests
 from dotenv import load_dotenv
+from urllib.parse import urlparse, parse_qs
+import pdb
 
 # Load environment variables from .env file
 load_dotenv()
@@ -12,7 +14,7 @@ TOKEN_URL = 'https://accounts.spotify.com/api/token'
 # Read client ID and client secret from environment variables
 CLIENT_ID = os.getenv('CLIENT_ID')
 CLIENT_SECRET = os.getenv('CLIENT_SECRET')
-REDIRECT_URI = 'http://localhost:8888/callback'
+REDIRECT_URI = 'http://localhost:8888/callback'  # Your redirect URI
 
 # Define the scope (the permissions your application needs)
 SCOPE = 'user-read-recently-played%20user-read-currently-playing'
@@ -25,12 +27,16 @@ auth_params = {
     'scope': SCOPE
 }
 
-auth_url = f'{AUTH_URL}?client_id={CLIENT_ID}&response_type=code&redirect_uri={REDIRECT_URI}&scope={SCOPE}'
+response = requests.get(AUTH_URL, params=auth_params)
+pdb.set_trace()
+redirect_url = response.url
 
-print(f'Please visit the following URL to authorize your application:\n{auth_url}')
-authorization_code = input('Enter the authorization code from the callback URL: ')
+# Step 2: Extract authorization code from redirect URL
+parsed_url = urlparse(redirect_url)
+query_params = parse_qs(parsed_url.query)
+authorization_code = query_params['code'][0]
 
-# Step 2: Exchange authorization code for access token
+# Step 3: Exchange authorization code for access token
 token_params = {
     'grant_type': 'authorization_code',
     'code': authorization_code,
@@ -47,14 +53,3 @@ if 'error' in response_data:
 else:
     access_token = response_data['access_token']
     print(f'Access Token: {access_token}')
-
-    # Update the access token in .env file
-    with open('.env', 'r') as f:
-        lines = f.readlines()
-
-    with open('.env', 'w') as f:
-        for line in lines:
-            if line.startswith('TOKEN='):
-                f.write(f'TOKEN={access_token}\n')
-            else:
-                f.write(line.strip() + '\n' if line.strip() else '\n')

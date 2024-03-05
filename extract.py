@@ -13,7 +13,7 @@ USER_ID = "YOUR_USER_NAME"
 TOKEN = os.getenv("TOKEN")
 
 
-# Creating an function to be used in other pyrhon files
+# Creating a function to be used in other python files
 def return_dataframe():
     input_variables = {
         "Accept": "application/json",
