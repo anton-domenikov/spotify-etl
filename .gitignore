@@ -1,5 +1,7 @@
 .env
 
 .idea
+__pycache__/
+
 
 local_commands.txt

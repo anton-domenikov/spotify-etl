@@ -49,5 +49,6 @@ else:
         for line in lines:
             if line.startswith('TOKEN='):
                 f.write(f'TOKEN={access_token}\n')
+                print('TOKEN saved in .env')
             else:
                 f.write(line.strip() + '\n' if line.strip() else '\n')

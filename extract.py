@@ -36,7 +36,6 @@ def return_dataframe():
     played_at_list = []
     timestamps = []
 
-    print(data)
     # Extracting only the relevant bits of data from the json object
     for song in data["items"]:
         song_names.append(song["track"]["name"])
@@ -54,5 +53,3 @@ def return_dataframe():
     song_df = pd.DataFrame(song_dict, columns=["song_name", "artist_name", "played_at", "timestamp"])
     return song_df
 
-
-print(return_dataframe())
