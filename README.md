@@ -65,11 +65,11 @@ This guide will walk you through the process of creating a Spotify Developer acc
 
 ### Step 2.4: Get your Token
 
-1. Run [auth](auth.py)
-2. Follow the instructions there. Get the Code from the new URL as the picture 
-![](images/auth-code.png)
-3. If you are not logged in, you will be prompted to do so using your Spotify credentials. After that you will be asked to authorize access to the data sets or features defined in the scopes.
+1. Run [auth](auth.py) and open the link that's generated.
+2. If you are not logged in, you will be prompted to do so using your Spotify credentials. After that you will be asked to authorize access to the data sets or features defined in the scopes.
 ![](images/spotify-app-login-first-time.png)
+3. Follow the instructions there. Get the Code from the new URL as the picture 
+![](images/auth-code.png)
 4. Make sure you get the whole string AFTER 'code=' and copy paste it into the expected input
 ![](images/auth-code-input.png)
 5. Now the TOKEN is saved automatically in .env file and will be Valid for the next 3600 seconds / 1 hour. After that if needed run [auth](auth.py) again to get a new token.
