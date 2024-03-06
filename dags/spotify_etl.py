@@ -10,11 +10,8 @@ from datetime import datetime
 import datetime
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
-
-USER_ID = "YOUR_USER_NAME"
 TOKEN = os.getenv("TOKEN")
 print('started')
 

@@ -1,12 +1,6 @@
 import extract
 import transform
 import sqlalchemy
-import pandas as pd
-from sqlalchemy.orm import sessionmaker
-import requests
-import json
-from datetime import datetime
-import datetime
 import sqlite3
 
 DATABASE_LOCATION = "sqlite:///my_played_tracks.sqlite"
@@ -22,7 +16,7 @@ if __name__ == "__main__":
 
     # Loading into Database
     engine = sqlalchemy.create_engine(DATABASE_LOCATION)
-    conn = sqlite3.connect('my_played_tracks.sqlite')
+    conn = sqlite3.connect('../my_played_tracks.sqlite')
     cursor = conn.cursor()
 
     # SQL Query to Create Played Songs
