@@ -18,7 +18,7 @@ This guide will walk you through the process of creating a Spotify Developer acc
 2. Fill in the required information for your application:
    - App name - can be anything
    - App description - can be anything
-   - Redirect URI - You need to use `http://localhost:8888/callback` We pass the redirect URI during the Authorisation Flow, so they need to match exactly.
+   - Redirect URI - You need to use ```http://localhost:8888/callback``` We pass the redirect URI during the Authorisation Flow, so they need to match exactly.
    - Which API/SDKs are you planning to use? - select Web API
      ![](images/spotify-api-create-app.png)
 
@@ -39,7 +39,7 @@ This guide will walk you through the process of creating a Spotify Developer acc
 3. Make sure you get the whole string AFTER 'code=' and copy paste it into the expected input
 ![](images/auth-code-input.png)
 4. Now the TOKEN is saved automatically in .env file and will be Valid for the next 3600 seconds / 1 hour. After that if needed run [auth](auth.py) again to get a new token.
-
+![](images/auth-token-saved.png)
 
 
 
