@@ -30,8 +30,18 @@ Open PowerShell as Administrator and run the following command:
 (Invoke-WebRequest -Uri https://install.python-poetry.org/install.ps1 -UseBasicParsing).Content | python -
 ```
 
+You can verify that Poetry has been installed correctly, by running:
+```commandline
+poetry --version
+```
+
 ### Install Dependencies from Existing pyproject.toml:
 We already have a pyproject.toml file in our repository with the dependencies listed, you can install them by running:
+```commandline
+poetry install
+```
+
+
 
 ## STEP 2: Spotify API Setup Guide
 
