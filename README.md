@@ -1,4 +1,6 @@
-Welcome to my project repository! In this blog post, we'll explore how to build a simple ETL (Extract, Transform, Load) pipeline using Python, leveraging Spotify's API for data extraction, performing basic transformations, conducting Data Quality checks, and ultimately loading the retrieved data into a PostgreSQL database. Additionally, we'll demonstrate how to automate this process using Apache Airflow.
+Welcome to my project repository! \
+In this blog post, we'll explore how to build a simple ETL (Extract, Transform, Load) pipeline using Python, leveraging Spotify's API for data extraction, performing basic transformations, conducting Data Quality checks, and ultimately loading the retrieved data into a PostgreSQL database. \
+Additionally, we'll demonstrate how to automate this process using Apache Airflow.
 
 
 ## STEP 1: Spotify API Setup Guide
