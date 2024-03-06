@@ -93,3 +93,17 @@ This guide will walk you through the process of creating a Spotify Developer acc
 - [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/login)
 
 Congratulations! You have successfully set up your Spotify Developer account, registered your application, and obtained your API credentials.
+
+
+# Local Run
+
+At this point you have Poetry environment initialized as well as a Spotify API and a Token for it.\
+What you can do now is to run the local ETL :)\
+side note: we are using the spotify scope user-read-recently-played so make sure you have at least listened to 1 or 2 tracks in order to see data
+
+to run the local ETL you can use:
+```commandline
+poetry run python local_etl/load.py 
+```
+
+After running the `load.py` you could see a .sqlite file will be saved to the root folder, to check the data inside the file head [here](https://inloop.github.io/sqlite-viewer/) and drop the `my_played_tracks.sqlite` file.

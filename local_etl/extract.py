@@ -5,11 +5,8 @@ import requests
 from datetime import datetime
 import datetime
 
-
 load_dotenv()
 
-
-USER_ID = "YOUR_USER_NAME"
 TOKEN = os.getenv("TOKEN")
 
 
