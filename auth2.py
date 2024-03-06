@@ -27,8 +27,8 @@ auth_params = {
     'scope': SCOPE
 }
 
-response = requests.get(AUTH_URL, params=auth_params)
-pdb.set_trace()
+response = requests.get(AUTH_URL, params=auth_params, allow_redirects=True)
+# pdb.set_trace()
 redirect_url = response.url
 
 # Step 2: Extract authorization code from redirect URL
