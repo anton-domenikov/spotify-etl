@@ -19,15 +19,16 @@ This guide will walk you through the process of creating a Spotify Developer acc
    - App name - can be anything
    - App description - can be anything
    - Redirect URI - You need to use `http://localhost:8888/callback` We pass the redirect URI during the Authorisation Flow, so they need to match exactly.
-![](images/spotify-api-create-app.png)
    - Which API/SDKs are you planning to use? - select Web API
+     ![](images/spotify-api-create-app.png)
 
 ### Step 1.3: Obtain Your API Credentials
 
 1. After creating your application, you will be redirected to the application dashboard.
 2. Click on your App > Top right corner click on Settings.
 3. Here, you will find your **Client ID** and **Client Secret**. These are your API credentials required for authenticating requests to the Spotify Web API.
-4. Make sure to keep your credentials secure. Do not share them publicly or expose them in your client-side code.
+![](images/spotify-api-app-secrets.png)
+5. Make sure to keep your credentials secure. Do not share them publicly or expose them in your client-side code.
 5. Go to [.env](.env) and put the Client ID and Client Secret there
 
 ### Step 1.4: Get your Token
